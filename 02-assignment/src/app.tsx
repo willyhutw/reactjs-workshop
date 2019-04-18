@@ -19,7 +19,7 @@ class App extends React.Component {
     createHandler(e: React.MouseEvent) {
         e.preventDefault();
         if (this.state.inputText.length > 0) {
-            const newUsers = this.state.users;
+            const newUsers = [...this.state.users];
             newUsers.push({
                 name: this.state.inputText,
             });
